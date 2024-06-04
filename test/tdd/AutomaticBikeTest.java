@@ -8,14 +8,14 @@ public class AutomaticBikeTest {
     @Test
     public void testThatAutomaticBikeCanBeTurned_on() {
         AutomaticBike bike = new AutomaticBike();
-        assertTrue(bike.bikeIsOn("on"),"The bike is On");
+        assertTrue(bike.bikeIsOn(),"The bike is On");
     }
 
     @Test
     public void testThatAutomaticBikeCanBeTurned_off() {
         AutomaticBike bike = new AutomaticBike();
-        assertTrue(bike.bikeIsOn("on"),"The bike is On");
-        assertFalse(bike.bikeIsOff("off"),"The bike is Off");
+        assertTrue(bike.bikeIsOn(),"The bike is On");
+        assertFalse(bike.bikeIsOff(),"The bike is Off");
     }
 
     @Test
@@ -32,7 +32,7 @@ public class AutomaticBikeTest {
     @Test
     public void testThatAutomaticBikeCanBe_acceleratedOnGear() {
         AutomaticBike bike = new AutomaticBike();
-        assertTrue(bike.bikeIsOn("on"),"The bike is On");
+        assertTrue(bike.bikeIsOn(),"The bike is On");
         assertEquals(1 ,bike.checkGear());
         bike.accelerate();
         assertEquals(1,bike.checkTheCurrentSpeed());
@@ -42,7 +42,7 @@ public class AutomaticBikeTest {
     @Test
     public void testThatAutomaticBikeCanBe_acceleratedTwice() {
         AutomaticBike bike = new AutomaticBike();
-        assertTrue(bike.bikeIsOn("on"), "The bike is On");
+        assertTrue(bike.bikeIsOn(), "The bike is On");
         assertEquals(1, bike.checkGear());
         bike.accelerate();
         bike.accelerate();
@@ -53,7 +53,7 @@ public class AutomaticBikeTest {
     @Test
     public void testThatAutomaticBikeCanBe_acceleratesToGears_2() {
         AutomaticBike bike = new AutomaticBike();
-        assertTrue(bike.bikeIsOn("on"),"The bike is On");
+        assertTrue(bike.bikeIsOn(),"The bike is On");
         assertEquals(1, bike.checkGear());
         for(int count = 0;count < 21;count++){
             bike.accelerate();}
@@ -64,7 +64,7 @@ public class AutomaticBikeTest {
     @Test
     public void testThatAutomaticBikeCanBe_acceleratesToAllGears() {
         AutomaticBike bike = new AutomaticBike();
-        assertTrue(bike.bikeIsOn("on"),"The bike is On");
+        assertTrue(bike.bikeIsOn(),"The bike is On");
         assertEquals(1, bike.checkGear());
         for(int count = 0;count < 21;count++){
             bike.accelerate();}
@@ -87,24 +87,24 @@ public class AutomaticBikeTest {
     }
 
     @Test
-    public void testThatAutomaticBikeCanBe_deacceleratedOnGear_2() {
+    public void testThatAutomaticBikeCanBe_deceleratedOnGear_2() {
         AutomaticBike bike = new AutomaticBike();
-        assertTrue(bike.bikeIsOn("on"),"The bike is On");
+        assertTrue(bike.bikeIsOn(),"The bike is On");
         bike.accelerate();
         bike.accelerate();
-        bike.deaccelerate();
+        bike.decelerate();
         assertEquals(1,bike.checkTheCurrentSpeed());
 
     }
     @Test
     public void testThatAutomaticBikeCanBe_deAcceleratesToGears_2() {
         AutomaticBike bike = new AutomaticBike();
-        assertTrue(bike.bikeIsOn("on"),"The bike is On");
+        assertTrue(bike.bikeIsOn(),"The bike is On");
         assertEquals(1, bike.checkGear());
         for(int count = 0;count < 25;count++){
             bike.accelerate();}
-        bike.deaccelerate();
-        bike.deaccelerate();
+        bike.decelerate();
+        bike.decelerate();
         assertEquals(25,bike.checkTheCurrentSpeed());
     }
 }

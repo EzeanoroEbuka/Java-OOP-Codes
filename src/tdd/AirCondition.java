@@ -4,12 +4,12 @@ public class AirCondition {
 
     private int temperature = 16;
 
-    public boolean isOn(String turnOn) {
+    public boolean isOn() {
 
         return true;
     }
 
-    public boolean isOff(String turnOff){
+    public boolean isOff(){
 
      return  false;
      }

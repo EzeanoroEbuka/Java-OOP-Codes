@@ -1,18 +1,16 @@
 package tdd;
 
 public class AutomaticBike {
-    private boolean bikeOnAndOffSwitch;
     private int speed = 0;
     private int gear;
 
-    public boolean bikeIsOn(String OnOrOff) {
-        bikeOnAndOffSwitch = true;
-        return bikeOnAndOffSwitch;
+    public boolean bikeIsOn() {
+
+        return true;
     }
 
-    public boolean bikeIsOff(String onOrOff) {
-        bikeOnAndOffSwitch = false;
-        return bikeOnAndOffSwitch;
+    public boolean bikeIsOff() {
+        return false;
     }
 
     public int checkTheCurrentSpeed() {
@@ -37,7 +35,7 @@ public class AutomaticBike {
         speed += checkGear();
     }
 
-    public void deaccelerate() {
+    public void decelerate() {
         speed -= checkGear();
     }
 }
