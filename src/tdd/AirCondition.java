@@ -1,17 +1,17 @@
 package tdd;
 
 public class AirCondition {
-    private boolean OnAndOffButton;
+
     private int temperature = 16;
 
     public boolean isOn(String turnOn) {
-        OnAndOffButton = true;
-        return OnAndOffButton;
+
+        return true;
     }
 
     public boolean isOff(String turnOff){
-     OnAndOffButton = false;
-     return  OnAndOffButton;
+
+     return  false;
      }
 
     public int checkTemperature() {
@@ -26,6 +26,6 @@ public class AirCondition {
 
     public void decreaseTemperature(int degree) {
         temperature = temperature - degree;
-        if (temperature < 16) {temperature = 16;}
+        if (temperature < 16) {temperature = 16 ;}
     }
 }
