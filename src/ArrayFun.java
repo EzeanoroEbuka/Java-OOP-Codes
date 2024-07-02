@@ -1,3 +1,5 @@
+import tdd.Bank;
+
 public class ArrayFun {
 
     public static int[] multiplyArrayByTwo(int[] numberInput) {
